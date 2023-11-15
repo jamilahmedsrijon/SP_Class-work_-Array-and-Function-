@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+double findArea(int radius)
+{
+    return 3.14159 * radius * radius;
+}
+int main()
+{
+    int radius_1, radius_2;
+    double area_1, area_2;
+
+    printf("Enter the radius of the first circle: ");
+    scanf("%d", &radius_1);
+    printf("Enter the radius of the second circle: ");
+    scanf("%d", &radius_2);
+
+    area_1 = findArea(radius_1);
+    area_2 = findArea(radius_2);
+
+    if (area_1 > area_2) {
+        printf("The first circle has a greater area: %.2f\n", area_1);
+    } else if (area_2 > area_1) {
+        printf("The second circle has a greater area: %.2f\n", area_2);
+    } else {
+        printf("Both circles have the same area: %.2f\n", area_1);
+    }
+
+    return 0;
+}
