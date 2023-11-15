@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+float calculateAverage(float num1, float num2) {
+    return (num1 + num2) / 2.0;
+}
+int main()
+ {
+    float a = 9.0, b = 7.0;
+    float Avg = calculateAverage(a, b);
+    printf("The Avg is %0.2f\n", Avg);
+
+    return 0;
+}
