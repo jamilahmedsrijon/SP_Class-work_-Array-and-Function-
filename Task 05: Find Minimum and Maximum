@@ -1,0 +1,36 @@
+#include<stdio.h>
+
+int find_Min(int arr[], int size)
+{
+    int min = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+int find_Max(int arr[], int size)
+{
+    int max = arr[0];
+    for (int i = 1; i < size; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+int main() {
+    int array[] = {8, 5, 0, 25, 9, 15, 17};
+    int size = sizeof(array) / sizeof(array[0]);
+
+    int min = find_Min(array, size);
+    int max = find_Max(array, size);
+
+    printf("Minimum value: %d\n", min);
+    printf("Maximum value: %d\n", max);
+
+    return 0;
+}
